@@ -3,7 +3,7 @@
 import { readFileSync, writeFileSync } from 'node:fs';
 
 // read file
-const data = readFileSync('./readFileSync.js', 'utf8'); // it's important to pass always encoding
+const data = readFileSync('./readFileSync.ts', 'utf8'); // it's important to pass always encoding
 
 // process file
 const processedData = data.split('\n')

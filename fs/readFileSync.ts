@@ -2,7 +2,7 @@
 
 import { readFileSync } from 'node:fs';
 
-const data = readFileSync('./readFileSync.js', 'utf8');
+const data = readFileSync('./readFileSync.ts', 'utf8');
 
 const processedData = data.split('\n')
     .filter((line) => !!line)

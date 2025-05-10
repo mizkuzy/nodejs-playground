@@ -8,28 +8,23 @@
 const search = (input: string[], searchTerm: string): number | undefined => {
     let start = 0;
     let end = input.length - 1;
-    let index = Math.floor(input.length / 2);
 
-    for (; index >= 0 && start <= end;) {
-        const currentValue = input[index];
+    while (start <= end) {
+        const mid = Math.floor((end - start) / 2 + start);
+        const currentValue = input[mid];
 
         if (currentValue === searchTerm) {
-            return index;
+            return mid;
         }
 
         if (currentValue > searchTerm) {
-            end = index - 1;
-            // end = index
+            end = mid - 1;
         } else {
-            start = index + 1;
-            // start = index
-        }
-        index = Math.floor((end - start) / 2 + start);
-
-        if (index < 0) {
-            return;
+            start = mid + 1;
         }
     }
+
+    return undefined;
 }
 
 export default search;

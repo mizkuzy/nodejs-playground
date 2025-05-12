@@ -2,7 +2,7 @@
  * Sorts an array of numbers in place, ASC
  * @param input
  */
-const sort = (input: number[]) => {
+const sort = (input: number[]): number[] => {
     for (let i = 0; i < input.length; i++) {
         let min = input[i]
         let swapIndex = i
@@ -18,6 +18,8 @@ const sort = (input: number[]) => {
             input[i] = min
         }
     }
+
+    return input
 }
 
 export default sort;
